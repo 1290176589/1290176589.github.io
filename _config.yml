@@ -109,5 +109,3 @@ lazyload:
   enable: false
   onlypost: false
   loadingImg: /images/loading.gif
-
-  
