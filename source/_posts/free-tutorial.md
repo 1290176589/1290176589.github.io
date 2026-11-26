@@ -1,6 +1,7 @@
 ---
 title: ▶　免费教程
 sticky: 7
+date: 2026-11-10 10:00:00
 cover: /7.jpg
 desc: UE5.8及以上版本 \ 小室内带交互 \ 零基础教学
 video_link: https://www.bilibili.com/video/BV1WAXwBCEGR?spm_id_from=333.788.videopod.sections&vd_source=ca39cac5719ef82da8ad1505d6417aeb

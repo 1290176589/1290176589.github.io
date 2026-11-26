@@ -1,6 +1,7 @@
 ---
 title: ▶　教程案例四
 sticky: 4
+date: 2026-11-14 10:00:00
 cover: /4.jpg
 desc: UE5.7及以上版本 \ PCG森林 \ 零基础教学
 video_link: https://www.bilibili.com/video/BV1WAXwBCEF4?spm_id_from=333.788.videopod.sections&vd_source=ca39cac5719ef82da8ad1505d6417aeb

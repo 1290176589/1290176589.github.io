@@ -1,6 +1,7 @@
 ---
 title: ▶　教程案例五
 sticky: 5
+date: 2026-11-15 10:00:00
 cover: /5.jpg
 desc: UE5.7及以上版本 \ PCG生态缸 \ 零基础教学
 video_link: https://www.bilibili.com/video/BV1WAXwBCEGR?spm_id_from=333.788.videopod.sections&vd_source=ca39cac5719ef82da8ad1505d6417aeb

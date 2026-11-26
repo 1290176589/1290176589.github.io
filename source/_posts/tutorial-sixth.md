@@ -1,6 +1,7 @@
 ---
 title: ▶　教程案例六
 sticky: 6
+date: 2026-11-16 10:00:00
 cover: /6.jpg
 desc: UE5.7及以上版本 \ 纽约世界贸易中心城市 \ 零基础教学
 video_link: https://www.bilibili.com/video/BV1V3d5BqEC1/?spm_id_from=333.1387.collection.video_card.click&vd_source=ca39cac5719ef82da8ad1505d6417aeb

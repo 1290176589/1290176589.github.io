@@ -1,6 +1,7 @@
 ---
 title: ▶　教程案例一
 sticky: 1
+date: 2026-11-11 10:00:00
 cover: /1.jpg
 desc: UE5.2及以上版本 \ 室内交互蓝图 \ 零基础教学
 video_link: https://www.bilibili.com/video/BV1J3XwBMEp6/?spm_id_from=333.1387.collection.video_card.click&vd_source=ca39cac5719ef82da8ad1505d6417aeb

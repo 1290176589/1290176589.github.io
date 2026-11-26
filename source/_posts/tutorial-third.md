@@ -1,6 +1,7 @@
 ---
 title: ▶　教程案例三
 sticky: 3
+date: 2026-11-13 10:00:00
 cover: /3.jpg
 desc: UE5.6及以上版本 \ 蓝图模板应用 \ 零基础教学
 video_link: https://www.bilibili.com/video/BV1WNXwBGEw4?spm_id_from=333.788.videopod.sections&vd_source=ca39cac5719ef82da8ad1505d6417aeb
