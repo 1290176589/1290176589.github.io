@@ -1,0 +1,57 @@
+<!-- post list container -->
+<div class="body-container">
+  <div class="content-container layout-block article-list">
+    <% page.posts.each(function(post, i) { %>
+      <div class="article-item layout-padding">
+        <article class="card-container article-card content-padding--large soft-size--large soft-style--box">
+          <% if (post.cover) { %>
+            <div class="card-cover" background-image-lazy data-img="<%- url_for(post.cover) %>"></div>
+          <% } %>
+
+          <div class="card-text">
+            <% if (post.link) { %>
+              <a href="<%- url_for(post.link) %>" itemprop="url" target="_blank">
+                <h2 class="card-text--title"><%= post.title || "(no title)" %></h2>
+              </a>
+            <% } else { %>
+              <a href="<%- url_for(post.path) %>" itemprop="url">
+                <h2 class="card-text--title"><%= post.title || "(no title)" %></h2>
+              </a>
+            <% } %>
+
+            <!-- 显示描述和视频链接 -->
+            <% if (post.desc) { %>
+              <p class="card-text--desc" style="font-size: 18px;  margin-top: 1px;"><%= post.desc %></p>
+            <% } %>
+
+            <!-- 底部链接组 -->
+            <% if (post.Materials_link || post.video_link) { %>
+              <div class="card-text--row" style="text-align: left; display: flex; flex-direction: column; gap: 8px;">
+                
+                <!-- 资料链接 -->
+                <% if (post.Materials_link) { %>
+                  <a href="<%= post.Materials_link %>" target="_blank" style="color: #fb7299; font-weight: bold; text-decoration: none;">
+                    ▶ 项目文件
+                  </a>
+                <% } %>
+
+                <!-- 视频链接 -->
+                <% if (post.video_link) { %>
+                  <a href="<%= post.video_link %>" target="_blank" style="color: #fb7299; font-weight: bold; text-decoration: none;">
+                    ▶ 预览视频
+                  </a>
+                <% } %>
+                
+              </div>
+            <% } %>
+
+            <% if ( date(post.updated, null) != date(post.date, null) ) { %>
+            <% } %>
+            <%- partial("../_widget/category", { page: post, class_name: post.cover ? 'dark' : 'light' }) %>
+            <%- partial("../_widget/tag", { page: post, class_name: post.cover ? 'dark' : 'light' }) %>
+          </div>
+        </article>
+      </div>
+    <% }) %>
+  </div>
+</div>

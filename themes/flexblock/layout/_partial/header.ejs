@@ -1,0 +1,104 @@
+
+
+<!-- header container -->
+<header class="header-container<%= (is_post() || is_page()) ? ' post' : '' %>">
+  <% 
+    // 判断逻辑：如果是文章页(is_post)，且有文章封面(page.cover)，则只显示这一张图
+    // 否则（比如首页），就显示配置里的轮播图列表
+    let isSingleCover = is_post() && page.cover;
+    let banners = isSingleCover ? [page.cover] : (theme.banner_images || [theme.banner]); 
+  %>
+  
+  <% if (isSingleCover) { %>
+    <!-- 文章页单图模式：加上了 url_for -->
+    <div class="post-image" style="background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('<%- url_for(page.cover) %>')"></div>
+  <% } else { %>
+    <!-- 首页轮播图模式 -->
+    <div class="post-image banner-slider" id="header-slider">
+      <div class="slider-track">
+        <% banners.forEach(function(img) { %>
+          <!-- 轮播图单张：加上了 url_for -->
+          <div class="slide-item" style="background-image: url(<%- url_for(img) %>)"></div>
+        <% }) %>
+      </div>
+      <!-- 底部小圆点 -->
+      <div class="slider-dots">
+        <% banners.forEach(function(img, index) { %>
+          <span class="dot <%= index === 0 ? 'active' : '' %>" data-index="<%= index %>"></span>
+        <% }) %>
+      </div>
+    </div>
+  <% } %>
+
+  <%- partial('_partial/nav', null, {cache: !config.relative_link}) %>
+
+  <%# index container %>
+  <% if (is_home()) { %>
+    <div class="header-content">
+      <div class="post-text layout-block layout-padding">
+        <h1 class="title-wrap"><%= config.title %></h1>
+        <% if (config.subtitle) { %>
+          <h2 class="title-sub-wrap"><%= config.subtitle %></h2>
+        <% } %>
+      </div>
+    </div>
+  <% } %>
+
+  <%# archive container %>
+  <% if (is_archive()) { %>
+    <div class="header-content">
+      <div class="post-text layout-block layout-padding">
+        <h1 class="title-wrap">归档</h1>
+        <h2 class="title-sub-wrap">共有<%= site.posts.length %>篇文章</h2>
+      </div>
+    </div>
+  <% } %>
+
+  <%# category banner %>
+  <% if (is_category()) { %>
+    <%
+      var length = 0;
+      site.categories.each(function (category) {
+        if (category.name === page.category) length = category.length
+      });
+    %>
+    <div class="header-content">
+      <div class="post-text layout-block layout-padding">
+        <h1 class="title-wrap"><%= page.category %></h1>
+        <h2 class="title-sub-wrap">当前分类下共有<%= length %>篇文章</h2>
+      </div>
+    </div>
+  <% } %>
+
+  <%# tag banner %>
+  <% if (is_tag()) { %>
+    <%
+      var length = 0;
+      site.tags.each(function (tag) {
+        if (tag.name === page.tag) length = tag.length
+      });
+    %>
+    <div class="header-content">
+      <div class="post-text layout-block layout-padding">
+        <h1 class="title-wrap"><%= page.tag %></h1>
+        <h2 class="title-sub-wrap">当前标签下共有<%= length %>篇文章</h2>
+      </div>
+    </div>
+  <% } %>
+
+  <%# post banner %>
+  <% if (is_post() || is_page()) { %>
+    <div class="header-content">
+      <div class="post-text layout-block">
+        <div class="layout-margin">
+          <h1 class="title-wrap"><%= page.title %></h1>
+          <h2 class="title-sub-wrap">
+            <strong><%= page.author || config.author %></strong>
+          </h2>
+        </div>
+      </div>
+    </div>
+  <% } %>
+
+  
+</header>
