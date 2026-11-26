@@ -22,7 +22,7 @@ layout: _partial/content
 
 <p style="margin-bottom: 15px;">
 <strong style="font-size: 20px; color: #999;">QQ群号：</strong>
-<span style="font-size: 20px; color: #fb7299; font-weight: bold;">777966268287</span>
+<span style="font-size: 20px; color: #fb7299; font-weight: bold;">966268287</span>
 </p>
 
 <p style="margin-bottom: 0;">
