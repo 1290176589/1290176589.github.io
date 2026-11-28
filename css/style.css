@@ -659,10 +659,13 @@ html.show-mobile-nav .navbar-list {
 }
 @media screen and (max-width: 767px) {
   .header-container:not(.post) {
-    height: calc(100vh - 60px) !important;
+    height: 380px !important;
   }
   .header-container.post {
-    height: 350px !important;
+    height: 300px !important;
+  }
+  .banner-slider .slider-track {
+    touch-action: pan-y !important; /* 允许上下滑动 */
   }
 }
 .header-container:not(.post) .header-content {
@@ -679,8 +682,8 @@ html.show-mobile-nav .navbar-list {
 }
 .header-container.post .header-content {
   position: absolute !important;
-  top: 400px !important; /* 距离顶部的高度，如果不够往下，就把 180px 改大 */
-  left: 15% !important; /* 距离左侧的宽度，如果和 LOGO 没对齐，调整这里 */
+  top: 220px !important; /* 距离顶部的高度，我帮你调成了 220px（手机端） */
+  left: 15% !important;
   transform: none !important;
   width: auto !important;
   display: flex;
@@ -692,7 +695,7 @@ html.show-mobile-nav .navbar-list {
 .header-container.post .post-text {
   text-align: left !important;
   padding: 0 !important;
-  margin: 0 !important; /* 强制清除外边距 */
+  margin: 0 !important;
   transform: none !important;
 }
 .post-image {
