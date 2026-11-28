@@ -77,5 +77,5 @@ Materials_link: https://pan.baidu.com/s/1OA6F4cpp9o4YpFcyKCNoog?pwd=neqr
 
 ## 📝 课程目录
 
-#### 课程总时长: 15小时
-![教程说明配图](/catalogue/1.jpg)
+#### 课程总时长: 4小时15分
+![教程说明配图](/catalogue/7.jpg)
