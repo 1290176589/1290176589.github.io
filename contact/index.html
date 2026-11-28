@@ -94,7 +94,7 @@
   
 
   <!-- navbar -->
-<nav class="navbar">
+<nav class="navbar" id="navbar">
   <div class="navbar-content">
     <!-- logo -->
     <div class="navbar-logo">
@@ -162,7 +162,7 @@
       
       
       
-      <section class="article-entry markdown-body layout-margin content-padding--large soft-size--large soft-style--box">
+      <section id="post-content" class="article-entry markdown-body layout-margin content-padding--large soft-size--large soft-style--box">
         
 <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 40px; margin-top: 10px; margin-bottom: 20px; text-align: left;">
 
@@ -204,7 +204,7 @@
       
       
 
-
+    </div>
   </article>
 </div>
 
@@ -271,5 +271,59 @@
 
   
   <!-- 尾部用户自定义相关内容 -->
-</body>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function() {
+        const navbar = document.getElementById("navbar");
+        window.addEventListener("scroll", function() {
+          // 当向下滚动超过 50px 时
+          if (window.scrollY > 50) {
+            navbar.classList.add("scrolled");
+          } else {
+            // 回到顶部时移除特效
+            navbar.classList.remove("scrolled");
+          }
+        });
+      });
+    </script>
+  
+    <script>
+      document.addEventListener("DOMContentLoaded", function() {
+        const postContent = document.getElementById("post-content");
+        
+        if (postContent) {
+          // 获取文章里除了第一行之外的所有子元素（包括 h2, h3, p, div, img 等）
+          const elements = postContent.children;
+          
+          // 先给这些元素加上初始状态（往下偏移、透明）
+          for (let i = 0; i < elements.length; i++) {
+            elements[i].style.opacity = '0';
+            elements[i].style.transform = 'translateY(40px)';
+            elements[i].style.transition = 'opacity 0.8s ease-out, transform 0.8s ease-out';
+          }
+
+          // 使用 IntersectionObserver 监听它们是否进入屏幕
+          const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+              if (entry.isIntersecting) {
+                // 进入屏幕时，恢复原位并显示
+                entry.target.style.opacity = '1';
+                entry.target.style.transform = 'translateY(0)';
+                // 触发后取消监听，避免滑回去又消失
+                observer.unobserve(entry.target);
+              }
+            });
+          }, { 
+            threshold: 0.05, // 元素露出 5% 就开始触发
+            rootMargin: "0px 0px -50px 0px" // 稍微提前一点触发，体验更好
+          });
+
+          // 让所有子元素都进入监听
+          for (let i = 0; i < elements.length; i++) {
+            observer.observe(elements[i]);
+          }
+        }
+      });
+    </script>
+  </body>
 </html>

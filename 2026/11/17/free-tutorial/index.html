@@ -56,7 +56,7 @@
   
 
   <!-- navbar -->
-<nav class="navbar">
+<nav class="navbar" id="navbar">
   <div class="navbar-content">
     <!-- logo -->
     <div class="navbar-logo">
@@ -126,7 +126,7 @@
       
       
       
-      <section class="article-entry markdown-body layout-margin content-padding--large soft-size--large soft-style--box">
+      <section id="post-content" class="article-entry markdown-body layout-margin content-padding--large soft-size--large soft-style--box">
         <h2 id="🎨-图片预览"><a href="#🎨-图片预览" class="headerlink" title="🎨 图片预览"></a>🎨 图片预览</h2><div style="display: grid; grid-template-columns: repeat(4, 1fr); grid-auto-rows: 150px; gap: 15px; margin-top: 30px;">
 
   <img src="/7/1.jpg" style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px; grid-column: span 1; grid-row: span 2;">
@@ -135,19 +135,19 @@
   <img src="/7/4.jpg" style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px; grid-column: span 1; grid-row: span 2;">
 </div>
 
-<h2 id="🎬-视频预览"><a href="#🎬-视频预览" class="headerlink" title="🎬 视频预览"></a>🎬 视频预览</h2><h4 id="哔哩哔哩视频"><a href="#哔哩哔哩视频" class="headerlink" title="哔哩哔哩视频"></a><a target="_blank" href="https://www.bilibili.com/video/BV1WAXwBCEGR?spm_id_from=333.788.videopod.sections&vd_source=ca39cac5719ef82da8ad1505d6417aeb" rel="noopener noreferrer">哔哩哔哩视频</a></h4><h2 id="📖-教程说明"><a href="#📖-教程说明" class="headerlink" title="📖 教程说明"></a>📖 教程说明</h2><p>本课程为 <strong>虚幻引擎 UE5.8 小室内免费教程</strong> 零基础入门教程。从下载安装开始到做成一个完整的场景：</p>
+<h2 id="🎬-视频预览"><a href="#🎬-视频预览" class="headerlink" title="🎬 视频预览"></a>🎬 视频预览</h2><h4 id="哔哩哔哩视频"><a href="#哔哩哔哩视频" class="headerlink" title="哔哩哔哩视频"></a><a target="_blank" href="https://www.bilibili.com/video/BV1dD1xzAEst/?spm_id_from=333.1387.collection.video_card.click&vd_source=ca39cac5719ef82da8ad1505d6417aeb" rel="noopener noreferrer">哔哩哔哩视频</a></h4><h2 id="📖-教程说明"><a href="#📖-教程说明" class="headerlink" title="📖 教程说明"></a>📖 教程说明</h2><p>本课程为 <strong>虚幻引擎 UE5.8 小室内免费教程</strong> 零基础入门教程。从下载安装开始到做成一个完整的场景：</p>
 <ol>
 <li>UE4、UE5、Nvidia UE 三种不同 UE 版本的区别</li>
 <li>UE5.8 安装方法</li>
 <li>模型注意事项</li>
 <li>其他软件模型导入方法</li>
-<li>前期基础设置</li>
+<li>场景设置性能平衡</li>
 <li>灯光插件 Sky、HDRI 与灯光组件之间的关系</li>
 <li>材质系统制作</li>
 <li>MRQ 渲染设置方法</li>
 <li>蓝图换材质功能</li>
 </ol>
-<p> 💡 <strong>学习目标</strong>：帮助学员从正确路径起步，开启自己的场景交互项目，快速高效地完成场景交互制作，实现实时交互、单张渲染与漫游动画制作，<strong>解决 90% 新手常见的问题与困惑</strong>。</p>
+<p> 💡 <strong>学习目标</strong>：帮助学员从正确路径起步，开启自己的场景交互项目，快速高效地完成场景交互制作，实现实时交互、单张渲染与漫游动画制作，<strong>解决大部分新手常见的问题与困惑</strong>。</p>
 <hr>
 <h2 id="🏆-教程优势"><a href="#🏆-教程优势" class="headerlink" title="🏆 教程优势"></a>🏆 教程优势</h2><ul>
 <li>一对一辅导，永久答疑</li>
@@ -185,32 +185,32 @@
       
         <nav class="article-nav">
           
+          
             <div class="article-nav-item layout-padding">
   <article class="card-container article-nav-card content-padding--primary soft-size--large soft-style--box">
     
-      <div class="card-cover" background-image-lazy data-img="/1.jpg"></div>
+      <div class="card-cover" background-image-lazy data-img="/6.jpg"></div>
     
     <div class="card-text">
       
-        <a href="/2026/11/11/tutorial-first/" itemprop="url">
+        <a href="/2026/11/16/tutorial-sixth/" itemprop="url">
 
-          <h2 class="card-text--title text-ellipsis">▶　教程案例一</h2>
+          <h2 class="card-text--title text-ellipsis">▶　教程案例六</h2>
         </a>
       
       
       <div class="card-text--row text-ellipsis">
-        UE5.2及以上版本 \ 室内交互蓝图 \ 零基础教学
+        UE5.7及以上版本 \ 纽约世界贸易中心城市 \ 零基础教学
       </div>
       
     </div>
   </article>
 </div>
           
-          
         </nav>
       
 
-
+    </div>
   </article>
 </div>
 
@@ -277,5 +277,59 @@
 
   
   <!-- 尾部用户自定义相关内容 -->
-</body>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function() {
+        const navbar = document.getElementById("navbar");
+        window.addEventListener("scroll", function() {
+          // 当向下滚动超过 50px 时
+          if (window.scrollY > 50) {
+            navbar.classList.add("scrolled");
+          } else {
+            // 回到顶部时移除特效
+            navbar.classList.remove("scrolled");
+          }
+        });
+      });
+    </script>
+  
+    <script>
+      document.addEventListener("DOMContentLoaded", function() {
+        const postContent = document.getElementById("post-content");
+        
+        if (postContent) {
+          // 获取文章里除了第一行之外的所有子元素（包括 h2, h3, p, div, img 等）
+          const elements = postContent.children;
+          
+          // 先给这些元素加上初始状态（往下偏移、透明）
+          for (let i = 0; i < elements.length; i++) {
+            elements[i].style.opacity = '0';
+            elements[i].style.transform = 'translateY(40px)';
+            elements[i].style.transition = 'opacity 0.8s ease-out, transform 0.8s ease-out';
+          }
+
+          // 使用 IntersectionObserver 监听它们是否进入屏幕
+          const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+              if (entry.isIntersecting) {
+                // 进入屏幕时，恢复原位并显示
+                entry.target.style.opacity = '1';
+                entry.target.style.transform = 'translateY(0)';
+                // 触发后取消监听，避免滑回去又消失
+                observer.unobserve(entry.target);
+              }
+            });
+          }, { 
+            threshold: 0.05, // 元素露出 5% 就开始触发
+            rootMargin: "0px 0px -50px 0px" // 稍微提前一点触发，体验更好
+          });
+
+          // 让所有子元素都进入监听
+          for (let i = 0; i < elements.length; i++) {
+            observer.observe(elements[i]);
+          }
+        }
+      });
+    </script>
+  </body>
 </html>
