@@ -1,10 +1,10 @@
 ---
 title: ▶　免费教程
 sticky: 7
-date: 2026-11-10 10:00:00
+date: 2026-11-17 10:00:00
 cover: /7.jpg
 desc: UE5.8及以上版本 \ 小室内带交互 \ 零基础教学
-video_link: https://www.bilibili.com/video/BV1WAXwBCEGR?spm_id_from=333.788.videopod.sections&vd_source=ca39cac5719ef82da8ad1505d6417aeb
+video_link: https://www.bilibili.com/video/BV1dD1xzAEst/?spm_id_from=333.1387.collection.video_card.click&vd_source=ca39cac5719ef82da8ad1505d6417aeb
 Materials_link: https://pan.baidu.com/s/1OA6F4cpp9o4YpFcyKCNoog?pwd=neqr
 ---
 
@@ -20,7 +20,7 @@ Materials_link: https://pan.baidu.com/s/1OA6F4cpp9o4YpFcyKCNoog?pwd=neqr
 
 ## 🎬 视频预览
 
-#### [哔哩哔哩视频](https://www.bilibili.com/video/BV1WAXwBCEGR?spm_id_from=333.788.videopod.sections&vd_source=ca39cac5719ef82da8ad1505d6417aeb)
+#### [哔哩哔哩视频](https://www.bilibili.com/video/BV1dD1xzAEst/?spm_id_from=333.1387.collection.video_card.click&vd_source=ca39cac5719ef82da8ad1505d6417aeb)
 
 ## 📖 教程说明
 
@@ -30,13 +30,13 @@ Materials_link: https://pan.baidu.com/s/1OA6F4cpp9o4YpFcyKCNoog?pwd=neqr
 2. UE5.8 安装方法
 3. 模型注意事项
 4. 其他软件模型导入方法
-5. 前期基础设置
+5. 场景设置性能平衡
 6. 灯光插件 Sky、HDRI 与灯光组件之间的关系
 7. 材质系统制作
 8. MRQ 渲染设置方法
 9. 蓝图换材质功能
 
- 💡 **学习目标**：帮助学员从正确路径起步，开启自己的场景交互项目，快速高效地完成场景交互制作，实现实时交互、单张渲染与漫游动画制作，**解决 90% 新手常见的问题与困惑**。
+ 💡 **学习目标**：帮助学员从正确路径起步，开启自己的场景交互项目，快速高效地完成场景交互制作，实现实时交互、单张渲染与漫游动画制作，**解决大部分新手常见的问题与困惑**。
 
 ---
 

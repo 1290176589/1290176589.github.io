@@ -22,7 +22,7 @@ menu, nav, output, ruby, section, summary, time, mark, audio, video {
 
 html {
   box-sizing: border-box;
-  font-family: 'Open Sans', sans-serif;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   font-size: var(--font-base-size);
   line-height: var(--font-base-lh);
   -ms-text-size-adjust: 100%;
@@ -148,14 +148,25 @@ i, em, dfn {
 }
 
 .root-container {
-  background-color: var(--theme-bg-primary)
+  background: linear-gradient(135deg, #1f2429 0%, #121416 100%) fixed;
 }
 
-.body-container {
-  position: relative
-  padding: var(--layout-padding) 0
+.root-container {
+  background: transparent !important;
 }
 
+/* ================= 高级质感：背景呼吸光晕 ================= */
+body {
+  background-color: #121416 !important; 
+  background-image: radial-gradient(circle at 50% 50%, rgba(251, 114, 153, 0.08) 0%, transparent 60%) !important;
+  background-attachment: fixed !important;
+  animation: breatheGlow 15s ease-in-out infinite alternate !important;
+}
+
+@keyframes breatheGlow {
+  0% { background-size: 100% 100%; background-position: 50% 50%; }
+  100% { background-size: 150% 150%; background-position: 50% 60%; }
+}
 .back-to-top-fixed {
   position: fixed
   cursor: pointer

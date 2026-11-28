@@ -15,8 +15,8 @@
       </section>
       <% } %>
       
-      <%# 输出Markdown内容 %>
-      <section class="article-entry markdown-body layout-margin content-padding--large soft-size--large soft-style--box">
+      <%# 输出Markdown内容 👇 注意这里加了 id="post-content" 👇 %>
+      <section id="post-content" class="article-entry markdown-body layout-margin content-padding--large soft-size--large soft-style--box">
         <%- page.content %>
       </section>
 
@@ -32,6 +32,6 @@
         </nav>
       <% } %>
 
-
+    </div>
   </article>
 </div>

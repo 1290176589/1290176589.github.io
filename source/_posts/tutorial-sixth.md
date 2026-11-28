@@ -16,17 +16,10 @@ video_link: https://www.bilibili.com/video/BV1V3d5BqEC1/?spm_id_from=333.1387.co
   <img src="/6/12.jpg" style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px; grid-column: span 1; grid-row: span 1;">
   <img src="/6/2.jpg" style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px; grid-column: span 2; grid-row: span 2;">
   <img src="/6/5.jpg" style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px; grid-column: span 1; grid-row: span 3;">
-  <img src="/6/13.jpg" style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px; grid-column: span 1; grid-row: span 2;">
-  <img src="/6/10.jpg" style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px; grid-column: span 1; grid-row: span 1;">
   <img src="/6/11.jpg" style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px; grid-column: span 1; grid-row: span 2;">
-  <img src="/6/7.jpg" style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px; grid-column: span 2; grid-row: span 2;">
-  <img src="/6/8.jpg" style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px; grid-column: span 1; grid-row: span 2;">
-  <img src="/6/9.jpg" style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px; grid-column: span 1; grid-row: span 1;">
-  <img src="/6/6.jpg" style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px; grid-column: span 1; grid-row: span 2;">
-  <img src="/6/4.jpg" style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px; grid-column: span 1; grid-row: span 2;">
-  <img src="/6/14.jpg" style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px; grid-column: span 2; grid-row: span 1;">
-  <img src="/6/15.jpg" style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px; grid-column: span 1; grid-row: span 1;">
-  <img src="/6/16.jpg" style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px; grid-column: span 1; grid-row: span 1;">
+  <img src="/6/7.jpg" style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px; grid-column: span 2; grid-row: span 1;">
+
+
 </div>
 
 ## 🎬 视频预览

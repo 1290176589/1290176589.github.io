@@ -1,24 +1,64 @@
-.header-container.post .post-text {
-  text-align: left
-}
-
+/* ================= 全局基础设置 ================= */
 .header-container {
   position: relative
 }
 
-.header-content {
-  position: relative
-  width: 100%
-  height: var(--banner-height)
-  margin: auto
-  display: flex
-  flex-direction: column
-  align-items: center
-  justify-content: center
-  z-index: 10
-  pointer-events: none
+/* ================= 高度控制核心区 ================= */
+@media $mq-pc {
+  .header-container:not(.post) {
+    height: 100vh !important;
+  }
+  .header-container.post {
+    height: 700px !important;
+  }
 }
 
+@media $mq-mb {
+  .header-container:not(.post) {
+    height: calc(100vh - 60px) !important;
+  }
+  .header-container.post {
+    height: 350px !important;
+  }
+}
+
+/* ================= 首页文字绝对居中 ================= */
+.header-container:not(.post) .header-content {
+  position: absolute;
+  top: 45% !important;
+  left: 50%;
+  transform: translate(-50%, -50%); 
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 10;
+  pointer-events: none;
+}
+
+/* ================= 文章页/联系方式页文字固定靠左上 ================= */
+.header-container.post .header-content {
+  position: absolute !important; 
+  top: 400px !important;      /* 距离顶部的高度，如果不够往下，就把 180px 改大 */
+  left: 15% !important;       /* 距离左侧的宽度，如果和 LOGO 没对齐，调整这里 */
+  transform: none !important; 
+  width: auto !important;   
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start !important; 
+  z-index: 10;
+  pointer-events: none;
+}
+
+/* 👇 极其关键：清理掉可能把文字往下顶的巨大 margin，强制靠左 👇 */
+.header-container.post .post-text {
+  text-align: left !important;
+  padding: 0 !important;
+  margin: 0 !important; /* 强制清除外边距 */
+  transform: none !important;
+}
+
+/* ================= 基础文字样式 ================= */
 .post-image {
   position: absolute
   top: 0
@@ -32,7 +72,7 @@
   z-index: auto
 }
     
-// post text
+// post text (全局基础)
 .post-text {
   overflow: hidden
   text-align: center
@@ -70,7 +110,7 @@
   height: 100%
   overflow: hidden
   z-index: 0
-  background-color: #000 // 避免图片切换时漏出底色
+  background-color: #000
   &::after {
     content: ''
     position: absolute
@@ -78,18 +118,18 @@
     left: 0
     width: 100%
     height: 100%
-    pointer-events: none // 关键！让鼠标能穿透黑纱去拖拽图片
+    pointer-events: none
     opacity: 0.4
     background-color: #394245
     background-image: linear-gradient(234deg, #394245 0%, #000 100%)
-    z-index: 2 // 确保黑纱盖在图片上面，但在文字下面
+    z-index: 2 
   }
 
   .slider-track {
     display: flex
     width: 100%
     height: 100%
-    transition: transform 0.6s ease-in-out // 左右滑动的动画
+    transition: transform 0.6s ease-in-out
     user-select: none
     cursor: grab
     &:active {
@@ -97,7 +137,7 @@
     }
 
     .slide-item {
-      flex: 0 0 100% // 每张图占满整个宽度
+      flex: 0 0 100%
       width: 100%
       height: 100%
       background-size: cover
@@ -108,7 +148,7 @@
   // 底部小圆点容器
   .slider-dots {
     position: absolute
-    bottom: 20px
+    bottom: 30px 
     left: 0
     width: 100%
     display: flex
@@ -116,22 +156,18 @@
     gap: 10px
     z-index: 10
 
-    // 小圆点样式
     .dot {
       width: 10px
       height: 10px
       border-radius: 50%
-      background-color: rgba(255, 255, 255, 0.4) // 半透明白色
+      background-color: rgba(255, 255, 255, 0.4)
       cursor: pointer
       transition: background-color 0.3s, transform 0.3s
 
-      // 当前激活的圆点
       &.active {
-        background-color: #fff // 纯白
-        transform: scale(1.2) // 稍微放大一点
+        background-color: #fff
+        transform: scale(1.2)
       }
     }
   }
 }
-
-
